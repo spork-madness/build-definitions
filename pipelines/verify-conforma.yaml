@@ -77,6 +77,15 @@ spec:
         Setting to false is useful on specific conditions but will always mark the integration test as successful and
         humans will tend to ignore the test results if they failed. Use with caution.
       default: "true"
+    - name: TRUSTED_ARTIFACTS_DEBUG
+      description: Flag to enable debug logging in trusted artifacts. Set to a non-empty string to enable.
+      type: string
+      default: ""
+    - name: IGNORE_REKOR
+      type: string
+      description: >-
+        Skip Rekor transparency log checks during validation.
+      default: "true"
   results:
     - name: TEST_OUTPUT
       value: "$(tasks.verify.results.TEST_OUTPUT)"
