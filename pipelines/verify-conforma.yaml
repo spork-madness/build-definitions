@@ -88,7 +88,7 @@ spec:
       default: "true"
   results:
     - name: TEST_OUTPUT
-      value: "$(tasks.verify.results.TEST_OUTPUT)"
+      value: "$(tasks.verify-conforma.results.TEST_OUTPUT)"
   tasks:
     - name: verify-conforma
       timeout: "4h00m0s"
